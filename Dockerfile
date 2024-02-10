@@ -8,7 +8,7 @@ RUN apt-get update && \
     rm -rf /var/lib/apt/lists/*
 
 # Copy the custom index.html to the default Apache2 document root
-COPY index.html /var/www/html/
+COPY . /var/www/html/
 
 # Start Apache2 automatically when the container starts
 CMD ["apache2ctl", "-D", "FOREGROUND"]
